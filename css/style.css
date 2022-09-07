@@ -1,0 +1,365 @@
+@import url("https://use.typekit.net/xoj7ych.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+
+:root {
+  --black: #333333;
+  --grey: #828282;
+  --white: #f5f2f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  display: flex;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.left-section {
+  width: 30vw;
+  background: url("../images/pexels-rfstudio-3819572.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin-right: 2.5vw;
+}
+
+.left-section .logo {
+  height: 42px;
+  margin-left: 4rem;
+  margin-top: 2.5rem;
+}
+
+.right-section {
+  width: 67.5vw;
+  margin-right: 3.5rem;
+  margin-top: 3rem;
+}
+
+.navbar {
+  margin-bottom: 1.6rem;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+.nav-item-line {
+  width: 100%;
+  margin-right: 2.5rem;
+}
+
+.line {
+  height: 1px;
+  background-color: var(--black);
+  width: 100%;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 2rem;
+  width: 30%;
+}
+
+.nav-item {
+  color: var(--grey);
+}
+
+.active {
+  color: var(--black);
+}
+
+.social-icons {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.social-icons img {
+  height: 24px;
+}
+
+.upper {
+  display: flex;
+  align-items: flex-end;
+  font-family: merriweather, serif;
+}
+
+.creativity {
+  font-size: 108px;
+  font-weight: 900;
+  line-height: 1;
+  width: 60%;
+}
+
+.crea {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--black);
+}
+
+.tivity {
+  position: relative;
+  left: 25%;
+  color: var(--black);
+}
+
+.sub-head {
+  color: var(--grey);
+  position: relative;
+  bottom: 16px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.package-btn {
+  display: flex;
+  justify-content: end;
+  margin-top: 3%;
+}
+
+.btn {
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 22px 64px;
+  border: none;
+}
+
+.lower {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.quote-icon {
+  height: 28px;
+  margin-bottom: 1rem;
+}
+
+.bottom-img {
+  margin-top: 1rem;
+  width: 580px;
+}
+
+.bottom-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.features {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 600;
+  color: var(--grey);
+  list-style-type: none;
+}
+
+.features li {
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 2.5em;
+}
+
+.features li:after {
+  /* bullets */
+  content: url("../images/grey-bullet.svg");
+  transform: scale(0.08);
+  position: absolute;
+  left: -116px;
+  top: -92px;
+}
+
+.features .feature.active:after {
+  content: url("../images/black-bullet.svg");
+}
+
+.features li:before {
+  /* lines */
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 7px;
+  border-left: 1px solid var(--grey);
+  height: 150%;
+  width: 1px;
+}
+
+.features li:last-child:before {
+  height: 100%;
+}
+
+.downarray {
+  align-self: center;
+}
+
+.downarray img {
+  transform: scaleY(2) scaleX(1.5);
+}
+
+/* small pc : till 1200 */
+@media only screen and (max-width: 1200px) {
+  .left-section .logo {
+    height: 36px;
+    margin-top: 2rem;
+  }
+
+  .right-section {
+    margin-top: 2.5rem;
+  }
+
+  .social-icons {
+    gap: 1.5rem;
+  }
+
+  .social-icons img {
+    height: 22px;
+  }
+
+  .creativity {
+    font-size: 102px;
+  }
+
+  .package-btn {
+    margin-top: 1.6%;
+  }
+
+  .btn {
+    padding: 18px 54px;
+  }
+
+  .quote-icon {
+    height: 24px;
+  }
+
+  .bottom-img {
+    width: 480px;
+  }
+}
+
+/* small pc : till 1024 */
+@media only screen and (max-width: 1024px) {
+  .creativity {
+    font-size: 86px;
+  }
+
+  .btn {
+    padding: 14px 48px;
+  }
+
+  .bottom-img {
+    width: 380px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-container {
+    display: flex;
+    width: auto;
+    font-size: 14px;
+  }
+
+  .left-section {
+    position: absolute;
+    width: auto;
+    background: none;
+    height: auto;
+    margin-right: 2.5rem;
+  }
+
+  .left-section .logo {
+    height: 34px;
+    margin-left: 2rem;
+    margin-top: 1.2rem;
+  }
+
+  .right-section {
+    width: auto;
+    margin-right: 0;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 1.5rem;
+  }
+
+  .navbar {
+    margin-bottom: 4rem;
+  }
+
+  .nav-list {
+    float: right;
+  }
+
+  .nav-item-line {
+    display: none;
+  }
+
+  .nav-item:not(:last-child) {
+    margin-right: 1rem;
+    width: auto;
+  }
+  .social-icons {
+    float: right;
+    gap: 1.5rem;
+  }
+
+  .social-icons img {
+    height: 18px;
+  }
+
+  .creativity {
+    font-size: 72px;
+  }
+
+  .upper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sub-head {
+    align-self: center;
+    bottom: auto;
+    font-size: 18px;
+  }
+  .package-btn {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 16px 48px;
+  }
+
+  .lower {
+    margin-top: 3rem;
+    gap: 1rem;
+  }
+
+  .quote-icon {
+    height: 22px;
+    margin-bottom: 1rem;
+  }
+
+  .bottom-img {
+    margin-top: 1rem;
+    width: 260px;
+  }
+
+  .downarray {
+    display: none;
+  }
+}
